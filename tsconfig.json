@@ -1,7 +1,6 @@
 {
   "compilerOptions": {
-    "module": "ESNext",
-    "moduleResolution": "Node",
+    "module": "commonjs",
     "target": "ES6",
     "baseUrl": ".",
     "outDir": "./build",
