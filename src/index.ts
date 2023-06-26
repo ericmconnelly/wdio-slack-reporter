@@ -523,7 +523,8 @@ class SlackReporter extends WDIOReporter {
       const version =
         caps.browserVersion ||
         caps.version ||
-        caps.platformVersion ||
+        // eslint-disable-next-line @typescript-eslint/no-explicit-any
+        (caps as any).platformVersion ||
         caps.browser_version;
       const platform =
         caps.platformName ||
@@ -533,7 +534,9 @@ class SlackReporter extends WDIOReporter {
           : '(unknown)');
       if (device) {
         const program =
-          (caps.app || '').replace('sauce-storage:', '') || caps.browserName;
+          // eslint-disable-next-line @typescript-eslint/no-explicit-any
+          ((caps as any).app || '').replace('sauce-storage:', '') ||
+          caps.browserName;
         const executing = program ? `executing ${program}` : '';
 
         env = `${device} on ${platform} ${version} ${executing}`.trim();
