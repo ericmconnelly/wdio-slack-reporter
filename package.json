@@ -1,13 +1,10 @@
 {
-  "name": "@moroo/wdio-slack-reporter",
+  "name": "@ericmconnelly/wdio-slack-reporter",
   "description": "Reporter from WebdriverIO using Incoming webhook and Web API to send results to Slack.",
-  "author": {
-    "name": "Eric Connelly",
-    "email": "onlyericconnelly@gmail.com"
-  },
+  "author": "Eric Connelly <onlyericconnelly@gmail.com>",
   "homepage": "https://github.com/ericmconnelly/wdio-slack-reporter",
   "license": "MIT",
-  "version": "8.0.1",
+  "version": "8.0.2",
   "type": "module",
   "main": "build/index.js",
   "module": "build/index.js",
@@ -26,7 +23,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/ericmconnelly/wdio-slack-reporter.git"
+    "url": "git+https://github.com/ericmconnelly/wdio-slack-reporter.git"
   },
   "scripts": {
     "build": "tsc",
@@ -54,5 +51,8 @@
     "ts-node": "^10.9.1",
     "tsconfig-paths": "^4.1.2",
     "typescript": "^4.9.5"
+  },
+  "directories": {
+    "doc": "docs"
   }
 }
